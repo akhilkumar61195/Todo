@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid pd-25">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/logoipsum-logo-8.svg" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav  ml-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">MOBILE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">LINK TWO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">LINK THREE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="layout col-12 col-sm-6 col-md-4 col-lg-4  mb-3">
+      <div class="title">
+        <label class="todolist">To do list</label>
+      </div>
+      <ul class="list-group" *ngIf="searchAddList">
+        <li class="list-group-item search">
+          <input class="form-check-input me-1 checkbox-circle" type="checkbox" value="" aria-label="...">
+          <input class="form-control border-0" type="text" name="search" [(ngModel)]="searchText"
+            placeholder="start typing.." autocomplete="off">
+        </li>
+      </ul>
+      <ul class="list-group">
+        <li  *ngFor="let employee of employeesListData | filter:searchText;let i =index">
+          <span class="list-group-item" *ngIf="employee?.status=='todo'">
+          <span [class.toggled]="classToggled" (click)="showAnimate()">
+            <input class="form-check-input me-1 checkbox-circle" (click)="showOps(employee)" type="checkbox" value="" aria-label="...">
+            <label>{{employee.employee_name}} data sent here</label>
+          </span>
+          <span class="float-end  lay-items animate__animated animate__slideInRight" *ngIf="showOp">
+            <button type="button" class="btn btn-info mr-1"><i class="fa fa-pencil"></i>
+            </button>
+            <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i>
+            </button>
+          </span>
+        </span>
+        </li>
+      </ul>
+      <div class="addbtn">
+        <button type="button" class="btn" (click)="addBtn()"><i class="fa fa-plus-circle fa-2x"></i>
+        </button>
+      </div>
+    </div>
+    <div class="layout col-12 col-sm-6 col-md-4 col-lg-4  mb-3">
+      <div class="title">
+        <label class="todolist">Done</label>
+        <ul class="list-group done">
+          <li  *ngFor="let employee of employeesListData | filter:searchText">
+            <span class="list-group-item" *ngIf="employee?.status=='done'">
+              <span>
+                <input class="form-check-input me-1 checkbox-circle" [checked]="employee?.status=='done'" type="checkbox" value="" aria-label="...">
+                <label>{{employee.employee_name}} data sent here</label>
+              </span>
+              <span class="float-end  lay-items animate__animated animate__slideInRight" *ngIf="showOp">
+                <button type="button" class="btn btn-info mr-1"><i class="fa fa-pencil"></i>
+                </button>
+                <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i>
+                </button>
+              </span>
+            </span>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="pull-right">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

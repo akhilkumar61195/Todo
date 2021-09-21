@@ -1,0 +1,181 @@
+.my-icon{
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .list-group-item {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000040;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    opacity: 1;
+    width: 320px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 12px 12px 12px 20px;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #000000;
+    font-family: arial;
+  }
+  .list-group-item span label {
+    margin-left: 10px;
+  }
+  hr {
+    position: relative;
+    top: 65px;
+    bottom: 20px;
+    width: 100%;
+    color: black;
+  }
+  .form-check-input[type=checkbox] {
+    border-radius: 1.25em;
+    vertical-align: middle;
+    border: 1px solid #000;
+  }
+  .form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 23px;
+  }
+  .btn-info {
+    background-color: #880BD61A;
+    border: none;
+    height: auto;
+    border-radius: 0;
+    margin-left: 10px;
+  }
+  .btn-info i {
+    color: #880BD6;
+  }
+  .btn-danger {
+    background: #CC00001A;
+    border: none;
+    border-radius: 0;
+  }
+  .btn-danger i{
+    color: #CC0000;
+    
+  }
+  .layout{
+    border-right: 1px solid #9c9898;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .title{
+   
+    padding-bottom: 25px;
+    padding-top: 10px;
+  }
+  .search {
+    display: inline-flex;
+  }
+  .search .form-control {
+    padding: 0;
+    padding-left: 10px;
+  }
+  .search .form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color:transparent;
+    outline: 0;
+    box-shadow: none;
+  }
+  .form-check-input:focus {
+    box-shadow: none;
+  }
+  .title .todolist{
+    text-align: left;
+    font: normal normal bold 32px/12px Arial;
+    letter-spacing: 0px;
+    padding-bottom: 10px;
+    color: #000000;
+    text-transform: capitalize;
+  }
+  .pd-25{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .form-check-input:checked {
+    background-color: #880BD6;
+  }
+  .addbtn {
+    position: relative;
+  }
+  .addbtn button{
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+  }
+.addbtn button i {
+  color: #880BD6;
+}
+.lay-items {
+  display: none;
+}
+.list-group {
+  list-style-type: none;
+}
+.done {
+  margin-top: 20px;
+}
+  /* mobile devices */
+  @media only screen and (max-width: 600px) {
+  .layout {
+    border-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-group-item {
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1px solid #00000040;
+    border-radius: 0;
+    width: 100%;
+    font-size: 16px;
+    font-family: arial;
+    padding-left: 0;
+    padding-right: 0;
+    color: #000;
+  }
+  .list-group .list-group-item span{
+    padding-left: 15px;
+  }
+  .form-check-input[type=checkbox] {
+    border-radius: 1.25em;
+    border: 2px solid #000;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+  .title{
+    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-left: 15px;
+  }
+  .list-group {
+    border-radius: 0;
+  }
+  hr {
+    display: none;
+  }
+  .lay-items {
+    display: block;
+  }
+  .toggled {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    margin-left: -65px;
+  }
+
+  .list-group {
+    list-style-type: none;
+  }
+}
